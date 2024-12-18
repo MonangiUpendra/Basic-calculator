@@ -8,10 +8,13 @@ function clearscreen(){
 
 function calculate(){
     var p=document.getElementById("result").value
-    var q=eval(p)
-    document.getElementById("result").value=q
-
-
+    try {
+        var q = Function(`'use strict'; return (${p})`)();
+        document.getElementById("result").value = q;
+    } 
+    catch (e) {
+        document.getElementById("result").value = "Error";
+    }
 }
 function remove(){
         var display= document.getElementById("result");
