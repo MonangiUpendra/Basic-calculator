@@ -16,9 +16,11 @@ function calculate(){
         document.getElementById("result").value = "Error";
     }
 }
-function remove(){
-        var display= document.getElementById("result");
+function remove() {
+    var display = document.getElementById("result");
+    if (display.value === "Error") {
+        display.value = "";
+    } else {
         display.value = display.value.slice(0, -1);
-      }
-
-
+    }
+}
