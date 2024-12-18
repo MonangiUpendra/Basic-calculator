@@ -5,19 +5,6 @@
     margin: auto;
 }
 
-@media (max-width: 600px) {
-    .calculator {
-        width: 100%;
-    }
-    .display-box {
-        font-size: 1.2em;
-    }
-    input[type=button] {
-        font-size: 1em;
-        height: 3em;
-    }
-}
-
 .display-box{
     font-family: sans-serif;
     background-color: #ddfaff;
