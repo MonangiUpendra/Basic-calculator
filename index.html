@@ -8,37 +8,34 @@
         <div>
             <table class="calculator" >
                 <tr>
-                <td colspan="2"><input type="text" class="display-box" id="result"  disabled></td>
-                <td><input type="button" value="delete" id="delete" onclick="remove()"></td>
-                <td><input type="button" value="clear" onclick="clearscreen()" id="btn" ></td>
+                <td colspan="2"><input type="text" class="display-box" id="result" aria-label="Calculator Display" disabled></td>
+                <td><input type="button" value="delete" id="delete" onclick="remove()" aria-label="Delete last character"></td>
+                <td><input type="button" value="clear" onclick="clearscreen()" id="btn" aria-label="Clear the display"></td>
                 </tr>
                 <tr>
-                    <td><input type="button" value="1" onclick="display(1)"></td>
-                    <td><input type="button" value="2"onclick="display(2)"></td>
-                    <td><input type="button" value="3"onclick="display(3)"></td>
-                    <td><input type="button" value="/"onclick="display('/')"></td>
+                    <td><input type="button" value="1" onclick="display(1)" aria-label="Number 1"></td>
+                    <td><input type="button" value="2" onclick="display(2)" aria-label="Number 2"></td>
+                    <td><input type="button" value="3" onclick="display(3)" aria-label="Number 3"></td>
+                    <td><input type="button" value="/" onclick="display('/')" aria-label="Division"></td>
                 </tr>
                 <tr>
-                    <td><input type="button" value="4"onclick="display(4)"></td>
-                    <td><input type="button" value="5"onclick="display(5)"></td>
-                    <td><input type="button" value="6"onclick="display(6)"></td>
-                    <td><input type="button" value="-"onclick="display('-')"></td>
+                    <td><input type="button" value="4" onclick="display(4)" aria-label="Number 4"></td>
+                    <td><input type="button" value="5" onclick="display(5)" aria-label="Number 5"></td>
+                    <td><input type="button" value="6" onclick="display(6)" aria-label="Number 6"></td>
+                    <td><input type="button" value="-" onclick="display('-')" aria-label="Subtraction"></td>
                 </tr>
                 <tr>
-                    <td><input type="button" value="7"onclick="display(7)"></td>
-                    <td><input type="button" value="8"onclick="display(8)"></td>
-                    <td><input type="button" value="9"onclick="display(9)"></td>
-                    <td><input type="button" value="+"onclick="display('+')"></td>
+                    <td><input type="button" value="7" onclick="display(7)" aria-label="Number 7"></td>
+                    <td><input type="button" value="8" onclick="display(8)" aria-label="Number 8"></td>
+                    <td><input type="button" value="9" onclick="display(9)" aria-label="Number 9"></td>
+                    <td><input type="button" value="+" onclick="display('+')" aria-label="Addition"></td>
                 </tr>
                 <tr>
-                    <td><input type="button" value="."onclick="display('.')"></td>
-                    <td><input type="button" value="0"onclick="display(0)"></td>
-                    <td><input type="button" value="=" onclick="calculate(value)"></td>
-                    <td><input type="button" value="*"onclick="display('*')"></td>
+                    <td><input type="button" value="." onclick="display('.')" aria-label="Decimal point"></td>
+                    <td><input type="button" value="0" onclick="display(0)" aria-label="Number 0"></td>
+                    <td><input type="button" value="=" onclick="calculate(value)" aria-label="Equals"></td>
+                    <td><input type="button" value="*" onclick="display('*')" aria-label="Multiplication"></td>
                 </tr>
-                
-
-
             </table>
         </div>
         <script type="text/javascript" src="index.js">
