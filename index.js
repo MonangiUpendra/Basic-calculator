@@ -20,3 +20,11 @@ function calculate() {
         document.getElementById("result").value = "Error";
     }
 }
+function remove() {
+    var display = document.getElementById("result");
+    if (display.value === "Error") {
+        display.value = "";
+    } else if (display.value.length > 0) {
+        display.value = display.value.slice(0, -1); 
+    }
+}
