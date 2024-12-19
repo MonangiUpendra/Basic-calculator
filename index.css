@@ -13,10 +13,7 @@
     border-radius: 5px;
     width: 98%;
     height: 65%;
-}
-
-#btn, #delete {
-    background-color: #71e089;
+    font-size: 2em;
 }
 
 input[type=button] {
@@ -28,6 +25,7 @@ input[type=button] {
     height: 70%;
     border-radius: 5px;
     outline: none;
+    font-size: 1.5em;
 }
 
 input:active[type=button] {
@@ -39,7 +37,6 @@ input:active[type=button] {
 body {
     background-color: rgb(123, 203, 232);
 }
-
 
 @media (max-width: 600px) {
     .calculator {
@@ -57,4 +54,3 @@ body {
         font-size: 1em;
     }
 }
-
