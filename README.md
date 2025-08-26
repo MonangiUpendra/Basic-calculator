@@ -1,22 +1,4 @@
-Got it 👍 If you want to create the **README.md directly in GitHub** (without using terminal), here’s how:
-
----
-
-### 🔹 Steps to Add README from GitHub UI
-
-1. Go to your repo 👉 [Basic-calculator](https://github.com/MonangiUpendra/Basic-calculator)
-2. On the repo home page, look for a button/option **“Add a README”** (if none exists)
-
-   * If README already exists → Click **Add file → Create new file**.
-3. Name the file exactly:
-
-   ```
-   README.md
-   ```
-4. Paste the final content I gave you 👇
-
-```markdown
-# 🧮 Basic Calculator
+ 🧮 Basic Calculator
 
 A simple, stylish, and responsive **Basic Calculator** built with **HTML, CSS, and JavaScript**.  
 Supports keyboard input and core arithmetic operations. Designed as a foundation project while learning front-end development.
