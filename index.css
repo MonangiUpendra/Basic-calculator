@@ -1,56 +1,75 @@
-.calculator {
-    height: auto;
-    width: 90%;
-    max-width: 400px;
-    margin: auto;
-}
-
-.display-box {
-    font-family: sans-serif;
-    background-color: #ddfaff;
-    border: 1px solid black;
-    color: black;
-    border-radius: 5px;
-    width: 98%;
-    height: 65%;
-    font-size: 2em;
-}
-
-input[type=button] {
-    font-family: sans-serif;
-    background-color: #fefdff;
-    border: 1px solid rgb(4, 253, 13);
-    color: rgb(84, 116, 85);
-    width: 100%;
-    height: 70%;
-    border-radius: 5px;
-    outline: none;
-    font-size: 1.5em;
-}
-
-input:active[type=button] {
-    background-color: #504f52;
-    color: white;
-    box-shadow: 0px 0px 5px #c1c1c1;
-}
-
+/* General Page Style */
 body {
-    background-color: rgb(123, 203, 232);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
 }
 
-@media (max-width: 600px) {
-    .calculator {
-        width: 100%;
-        padding: 5px;
-    }
-
-    .display-box {
-        font-size: 1.2em;
-        height: 50px;
-    }
-
-    input[type=button] {
-        height: 50px;
-        font-size: 1em;
-    }
+.container {
+  text-align: center;
 }
+
+h1 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Calculator Box */
+.calculator {
+  background: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+  max-width: 320px;
+}
+
+/* Display */
+.display {
+  width: 100%;
+  height: 60px;
+  font-size: 1.8em;
+  text-align: right;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background: #f3faff;
+  color: #333;
+  box-shadow: inset 2px 2px 5px #d1d1d1, inset -2px -2px 5px #fff;
+}
+
+/* Buttons */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+button {
+  padding: 15px;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 10px;
+  background: #f1f3f6;
+  box-shadow: 2px 2px 5px #b8b8b8, -2px -2px 5px #fff;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #e1e4eb;
+  transform: scale(1.05);
+}
+
+button:active {
+  background: #d1d5db;
+}
+
+/* Special Buttons */
+.clear { background: #ff7b7b; color: white; }
+.delete { background: #ffb347; color: white; }
+.equal { background: #4caf50; color: white; grid-column: span 1; }
+.zero { grid-column: span 2; }

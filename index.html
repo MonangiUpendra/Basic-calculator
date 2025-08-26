@@ -1,46 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>calculator</title>
-    <link rel="stylesheet" type="text/css" href="index.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="index.css">
 </head>
 <body>
-        <div>
-            <table class="calculator" >
-                <tr>
-                <td colspan="2"><input type="text" class="display-box" id="result" aria-label="Calculator Display" disabled></td>
-                <td><input type="button" value="delete" id="delete" onclick="remove()" aria-label="Delete last character"></td>
-                <td><input type="button" value="clear" onclick="clearDisplay()" id="btn" aria-label="Clear the display"></td>
-                </tr>
-                <tr>
-                    <td><input type="button" value="1" onclick="display(1)" aria-label="Number 1"></td>
-                    <td><input type="button" value="2" onclick="display(2)" aria-label="Number 2"></td>
-                    <td><input type="button" value="3" onclick="display(3)" aria-label="Number 3"></td>
-                    <td><input type="button" value="/" onclick="display('/')" aria-label="Division"></td>
-                </tr>
-                <tr>
-                    <td><input type="button" value="4" onclick="display(4)" aria-label="Number 4"></td>
-                    <td><input type="button" value="5" onclick="display(5)" aria-label="Number 5"></td>
-                    <td><input type="button" value="6" onclick="display(6)" aria-label="Number 6"></td>
-                    <td><input type="button" value="-" onclick="display('-')" aria-label="Subtraction"></td>
-                </tr>
-                <tr>
-                    <td><input type="button" value="7" onclick="display(7)" aria-label="Number 7"></td>
-                    <td><input type="button" value="8" onclick="display(8)" aria-label="Number 8"></td>
-                    <td><input type="button" value="9" onclick="display(9)" aria-label="Number 9"></td>
-                    <td><input type="button" value="+" onclick="display('+')" aria-label="Addition"></td>
-                </tr>
-                <tr>
-                    <td><input type="button" value="." onclick="display('.')" aria-label="Decimal point"></td>
-                    <td><input type="button" value="0" onclick="display(0)" aria-label="Number 0"></td>
-                    <td><input type="button" value="=" onclick="calculate(value)" aria-label="Equals"></td>
-                    <td><input type="button" value="*" onclick="display('*')" aria-label="Multiplication"></td>
-                </tr>
-            </table>
-        </div>
-        <script type="text/javascript" src="index.js">
+  <div class="container">
+    <h1>Basic Calculator</h1>
+    <div class="calculator">
+      <input type="text" id="result" class="display" disabled>
 
-        </script>
-    
+      <div class="buttons">
+        <button onclick="clearDisplay()" class="clear">C</button>
+        <button onclick="removeChar()" class="delete">DEL</button>
+        <button onclick="append('%')">%</button>
+        <button onclick="append('/')">÷</button>
+
+        <button onclick="append('7')">7</button>
+        <button onclick="append('8')">8</button>
+        <button onclick="append('9')">9</button>
+        <button onclick="append('*')">×</button>
+
+        <button onclick="append('4')">4</button>
+        <button onclick="append('5')">5</button>
+        <button onclick="append('6')">6</button>
+        <button onclick="append('-')">−</button>
+
+        <button onclick="append('1')">1</button>
+        <button onclick="append('2')">2</button>
+        <button onclick="append('3')">3</button>
+        <button onclick="append('+')">+</button>
+
+        <button onclick="append('0')" class="zero">0</button>
+        <button onclick="append('.')">.</button>
+        <button onclick="calculate()" class="equal">=</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
 </body>
 </html>

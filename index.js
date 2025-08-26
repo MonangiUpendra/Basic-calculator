@@ -1,30 +1,41 @@
-
-function display(value) {
-    document.getElementById("result").value += value;
+function append(value) {
+  document.getElementById("result").value += value;
 }
 
 function clearDisplay() {
-    document.getElementById("result").value = "";
+  document.getElementById("result").value = "";
 }
 
+function removeChar() {
+  let display = document.getElementById("result");
+  display.value = display.value.slice(0, -1);
+}
 
 function calculate() {
-    var p = document.getElementById("result").value;
-    try {
-        if (p.includes("/0")) {
-            throw new Error("Division by zero");
-        }
-        var q = Function(`'use strict'; return (${p})`)();
-        document.getElementById("result").value = q;
-    } catch (e) {
-        document.getElementById("result").value = "Error";
-    }
+  try {
+    let expression = document.getElementById("result").value;
+
+    // Handle percentage
+    expression = expression.replace(/%/g, "/100");
+
+    let result = Function(`'use strict'; return (${expression})`)();
+    document.getElementById("result").value = result;
+  } catch (e) {
+    document.getElementById("result").value = "Error";
+  }
 }
-function remove() {
-    var display = document.getElementById("result");
-    if (display.value === "Error") {
-        display.value = "";
-    } else if (display.value.length > 0) {
-        display.value = display.value.slice(0, -1); 
-    }
-}
+
+/* Keyboard Support */
+document.addEventListener("keydown", function(event) {
+  const key = event.key;
+
+  if (!isNaN(key) || "+-*/.%".includes(key)) {
+    append(key);
+  } else if (key === "Enter") {
+    calculate();
+  } else if (key === "Backspace") {
+    removeChar();
+  } else if (key === "Escape") {
+    clearDisplay();
+  }
+});
